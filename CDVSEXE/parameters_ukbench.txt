@@ -1,0 +1,218 @@
+############################ Parameters ###############################
+#   name			Default value 	Comment
+#   modeID			0		(int) unique identifier of the set of parameters to be used (from 0 to 63)
+#   descLength			0		(int) number of bytes of the descriptor
+#   resizeMaxSize		640		(int) maximum size of one side of the image  
+#   vlSift_Peak_Threshold	-1		(double) vlsift peak threshold 
+#   blockWidth			6		(int) spatial resolution of the coordinates (max error = blockWidth/2)
+#   selectMaxPoints		3000	(int) max number of points used to describe an image
+#   retrievalMaxPoints		400		(int) max number of points used in the retrieval experiment
+#   numRelevantPoints		0		(int) number of points used to represent a query in the retrieval
+#   writePdf			0		(bool) write the pdf that represent the relevance of the descriptors
+#   ratioThreshold		0.85		(float) threshold for descriptor matching 
+#   minNumInliers		5		(int) min number of inliers after the geometric check
+#   wmThreshold			4.0		(double) weighted matching threshold
+#   wmMixed				3.6		(double) Weighted matching threshold for mixed cases
+#   debugLevel			0		(int) 0 = off, 1 = on (quiet), 2 = on (verbose), 3 = dump data into files
+#   forceRebuild		1 		(int) 0 = use existing descriptors, 1 = rebuild all descriptors
+#   ransacNumTests		10		(int) number of iterations in RANSAC 
+#   ransacThreshold		8.0		(float) distortion threshold to be used by RANSAC
+#   chiSquarePercentile		99		(uint) percentile used in DISTRAT for Chi-square computation
+#   retrievalLoops		2500		(int) number of loops performed in the final stage of the retrieval process
+#   queryExpansionLoops		0		(int) number of query expansion loops to perform in the retrieval experiment
+#   wmRetrieval				4.0		(double) Weighted matching threshold for retrieval
+#   scfvThreshold		0		(float) threshold value to control the sparsity of scfv vector
+#   hasVar			0		(bool) indicates if using the gradient vector w.r.t the variance of Gaussian function
+#   shiftOffset			0		(float)	shift parameter for each mode
+#   shiftOffsetMixed		0		(float)	shift parameter for each mode (for mixed cases, e.g. 1K-4K)
+#	MBIT_threshold		3			(int) threshold use to control the retrieval speed up
+
+## Default section: setting a parameter here applies to all modes
+ 
+[Default]
+datasetPath = F:\Graduate_work\Video_image_processing\CDVS_DATASET
+annotationPath = F:\Graduate_work\Video_image_processing\CDVS_DATASET\annotations_re
+blockWidth = 3
+
+## low memory global descriptor + scalar quantization
+
+[Mode = 7]
+modeExt = .512.cdvs
+descLength = 512
+retrievalLoops = 500
+chiSquarePercentile = 90
+ratioThreshold = 0.9
+scfvThreshold = 0.75
+hasVar = 0
+shiftOffset = -21.5
+wmThreshold = 1.75
+wmRetrieval = 3.6
+#wmRetrieval2Way = 2.7
+#shiftOffset2Way = -0.0019
+selectMaxPoints = 300
+
+[Mode = 8]
+modeExt = .1024.cdvs
+descLength = 1024
+chiSquarePercentile = 80
+retrievalLoops = 500
+retrievalMaxPoints = 300
+ratioThreshold = 0.9
+scfvThreshold = 0.7
+hasVar = 0
+shiftOffset = -33.125
+shiftOffsetMixed = -41.375
+wmThreshold = 2.62
+wmMixed = 2.75
+wmRetrieval = 3.6
+#wmRetrieval2Way = 2.7
+#shiftOffset2Way	= -0.025
+selectMaxPoints = 300
+
+[Mode = 9]
+modeExt = .2048.cdvs
+descLength = 2048
+chiSquarePercentile = 80
+retrievalLoops = 500
+retrievalMaxPoints = 300
+ratioThreshold = 0.9
+scfvThreshold = 0.6
+hasVar = 0
+shiftOffset = -49.875
+shiftOffsetMixed = -49.625
+wmThreshold = 2.01
+wmMixed = 2.03 
+wmRetrieval = 2.3
+#wmRetrieval2Way = 2.0
+#shiftOffset2Way = -0.0165
+selectMaxPoints = 300
+[Mode = 10]
+modeExt = .4096.cdvs
+descLength = 4096
+chiSquarePercentile = 80
+retrievalLoops = 500
+retrievalMaxPoints = 300
+ratioThreshold = 0.9
+scfvThreshold = 0.6
+hasVar = 1
+shiftOffset = -34.75
+wmThreshold = 1.88
+wmRetrieval = 2.3
+#wmRetrieval2Way = 2.0
+#shiftOffset2Way = -0.019
+selectMaxPoints = 300
+
+[Mode = 90]
+referrence_id = 9
+modeExt = .90.cdvs
+descLength = 2048
+chiSquarePercentile = 80
+retrievalLoops = 500
+retrievalMaxPoints = 300
+ratioThreshold = 0.9
+scfvThreshold = 0.6
+hasVar = 0
+shiftOffset = -49.875
+shiftOffsetMixed = -49.625
+wmThreshold = 2.01
+wmMixed = 2.03 
+wmRetrieval = 2.3
+#wmRetrieval2Way = 2.0
+#shiftOffset2Way = -0.0165
+selectMaxPoints = 300
+[Mode = 91]
+referrence_id = 9
+modeExt = .91.cdvs
+descLength = 2048
+chiSquarePercentile = 80
+retrievalLoops = 500
+retrievalMaxPoints = 300
+ratioThreshold = 0.9
+scfvThreshold = 0.6
+hasVar = 0
+shiftOffset = -49.875
+shiftOffsetMixed = -49.625
+wmThreshold = 2.01
+wmMixed = 2.03 
+wmRetrieval = 2.3
+#wmRetrieval2Way = 2.0
+#shiftOffset2Way = -0.0165
+selectMaxPoints = 300
+[Mode = 92]
+referrence_id = 9
+modeExt = .92.cdvs
+descLength = 2048
+chiSquarePercentile = 80
+retrievalLoops = 500
+retrievalMaxPoints = 300
+ratioThreshold = 0.9
+scfvThreshold = 0.6
+hasVar = 0
+shiftOffset = -49.875
+shiftOffsetMixed = -49.625
+wmThreshold = 2.01
+wmMixed = 2.03 
+wmRetrieval = 2.3
+#wmRetrieval2Way = 2.0
+#shiftOffset2Way = -0.0165
+selectMaxPoints = 300
+[Mode = 89]
+modeExt = .89.cdvs
+descLength = 4096
+chiSquarePercentile = 80
+retrievalLoops = 500
+retrievalMaxPoints = 300
+ratioThreshold = 0.9
+scfvThreshold = 0.6
+hasVar = 1
+shiftOffset = -34.75
+wmThreshold = 1.88
+wmRetrieval = 2.3
+#wmRetrieval2Way = 2.0
+#shiftOffset2Way = -0.019
+selectMaxPoints = 300
+
+[Mode = 11]
+modeExt = .8192.cdvs
+descLength = 8192
+chiSquarePercentile = 95
+retrievalLoops = 500
+retrievalMaxPoints = 300
+numRelevantPoints = 300
+ratioThreshold = 0.9
+scfvThreshold = 0.4
+hasVar = 1
+shiftOffset = -53.875
+wmThreshold = 2.24
+wmRetrieval = 2.3
+#wmRetrieval2Way = 2.0
+#shiftOffset2Way = 0.012
+selectMaxPoints = 500
+
+[Mode = 12]
+modeExt = .16384.cdvs
+descLength = 16384
+chiSquarePercentile = 95
+retrievalLoops = 500
+retrievalMaxPoints = 300
+numRelevantPoints = 300
+ratioThreshold = 0.9
+scfvThreshold = 0.2
+hasVar = 1
+shiftOffset = -84.375
+wmThreshold = 2.13
+wmRetrieval = 2.3
+#wmRetrieval2Way = 2.0
+#shiftOffset2Way = 0.0021
+selectMaxPoints = 650
+
+# This is the profile used to build the database
+[Mode = 13]
+modeExt = .DB.cdvs
+descLength = 4000
+selectMaxPoints = 300
+retrievalMaxPoints = 300
+ratioThreshold = 0.9
+queryExpansionLoops = 0
+scfvThreshold = 105
+hasVar = 1
