@@ -1,11 +1,11 @@
-# Image Retrieval by Aggregating CompactHand-crafted and Deep Features
+# Image Retrieval by Aggregating Compact Hand-crafted and Deep Descriptors
 This is a toolbox that implements the training and testing of the approach described in our papers:
-**Image Retrieval by Aggregating CompactHand-crafted and Deep Features**  
+**Image Retrieval by Aggregating Compact Hand-crafted and Deep Descriptors**  
 
 ## 1. Deep features extract
 
 The code of deep features extract is modified based on this
- [repo](https://github.com/filipradenovic/cnnimageretrieval-pytorch), and off-the-shelf models are show below.
+ [repo](https://github.com/filipradenovic/cnnimageretrieval-pytorch), and off-the-shelf models are shown below.
 
 
 ### Prerequisites
