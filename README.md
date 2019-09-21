@@ -4,7 +4,7 @@ This is a toolbox that implements the training and testing of the approach descr
 
 ## 1. Deep features extract
 
-The code of deep features extract is modified based on this
+The code of deep features extraction is modified based on this
  [repo](https://github.com/filipradenovic/cnnimageretrieval-pytorch), and off-the-shelf models are shown below.
 
 
