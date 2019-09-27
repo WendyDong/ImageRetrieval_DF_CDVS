@@ -1,6 +1,6 @@
-# Image Retrieval by Aggregating Compact Hand-crafted and Deep Descriptors
+# Feature Fusion for Image Retrieval with Adaptive Bitrate Allocation and Hard Negative Mining
 This is a toolbox that implements the training and testing of the approach described in our papers:
-**Image Retrieval by Aggregating Compact Hand-crafted and Deep Descriptors**  
+**Feature Fusion for Image Retrieval with Adaptive Bitrate Allocation and Hard Negative Mining**  
 
 ## 1. Deep features extract
 
